@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-color: sandybrown;
+        }
+    </style>
+<title>register</title>
+<script>
+    function myvalidate(form){
+        var FIRSTNAME=form.myname.value;
+        var LASTNAME=form.urname.value;
+        var PHONE=form.no.value;
+        var EMAIL=form.myemail.value;
+        var PASSWORD=form.pass.value;
+        if(FIRSTNAME.length === 0){
+            alert("enter valid firstname");
+            return false;
+        }
+        if(LASTNAME.length === 0){
+            alert("enter valid name");
+            return false;
+        }
+        if(PHONE.length === 0){
+            alert("enter valid phoneno");
+            return false;
+        }
+        if(EMAIL.length === 0){
+            alert("enter valid email");
+            return false;
+        }
+        if(PASSWORD.length === 0){
+            alert("enter valid password");
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+    <form action="#" onsubmit="return myvalidate(this);">
+       <center> <h2>REGISTRATION FORM</h2>
+        firstname:<input type="text"  name="myname" maxlength="5"><br><br>
+        lastname:<input type="text" name="urname" maxlength="5"><br><br>
+        phone:<input type="tel" name="no" id ="mobileno" pattern ="[0-9]{10}"><br><br>
+        address:<textarea name="address" row="10" cols="20"></textarea><br><br>
+        email: <input type="email" name ="myemail"><br><br>
+        password:<input type="password"  name="pass" maxlength="5"><br><br>
+        
+         
+    <input type = "submit"> </center>    
+</form>
+    </body> 
+
+</html>
